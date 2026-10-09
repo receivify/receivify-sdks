@@ -1,0 +1,10 @@
+# The quickstart makes real HTTP calls, so it needs both bundled providers.
+if(RECEIVIFY_WITH_CURL AND RECEIVIFY_WITH_OPENSSL)
+  add_executable(receivify_quickstart quickstart.cpp)
+  target_link_libraries(receivify_quickstart PRIVATE receivify::receivify)
+  if(MSVC)
+    target_compile_options(receivify_quickstart PRIVATE /EHsc /utf-8)
+  endif()
+else()
+  message(STATUS "receivify: skipping examples (they need both RECEIVIFY_WITH_CURL and RECEIVIFY_WITH_OPENSSL)")
+endif()

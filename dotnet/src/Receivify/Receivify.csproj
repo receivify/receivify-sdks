@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>12.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Receivify</AssemblyName>
+    <RootNamespace>Receivify</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Receivify</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Receivify</Authors>
+    <Company>Receivify</Company>
+    <Product>Receivify .NET SDK</Product>
+    <Description>Official .NET SDK for the Receivify crypto payment gateway - invoices, forwarding addresses, payment links and signed webhooks. Zero third-party dependencies: HttpClient, System.Text.Json and System.Security.Cryptography only.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://receivify.io</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/receivify/receivify-sdks</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>receivify;bitcoin;crypto;payments;payment-gateway;invoice;webhook;btcpay;self-hosted</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <!--
+    Deliberately empty: there is not a single PackageReference in this SDK, and there never
+    should be. Everything below comes from the base class library.
+  -->
+
+</Project>

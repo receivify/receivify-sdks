@@ -1,0 +1,55 @@
+{
+  "name": "receivify",
+  "version": "1.0.0",
+  "description": "Official Node.js SDK for the Receivify crypto payment gateway — invoices, forwarding addresses, payment links and signed webhooks. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Receivify",
+  "homepage": "https://receivify.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/receivify/receivify-sdks.git",
+    "directory": "node"
+  },
+  "bugs": {
+    "url": "https://github.com/receivify/receivify-sdks/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./src/index.js",
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "node --test test/client.test.js test/units.test.js test/webhooks.test.js",
+    "check": "node --check src/index.js && node --check src/client.js && node --check src/errors.js && node --check src/webhooks.js && node --check src/units.js && node --check src/version.js"
+  },
+  "keywords": [
+    "receivify",
+    "bitcoin",
+    "crypto",
+    "payments",
+    "payment-gateway",
+    "invoice",
+    "webhook",
+    "btcpay",
+    "self-hosted"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

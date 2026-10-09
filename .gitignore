@@ -1,0 +1,23 @@
+# Node
+node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+# C++
+/cpp/build*/
+# Editors / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

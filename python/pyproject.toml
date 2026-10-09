@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "receivify"
+dynamic = ["version"]
+description = "Official Python SDK for Receivify - self-hosted crypto payment gateway (invoices, forwarding addresses, payment links, signed webhooks)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Receivify" }]
+keywords = ["receivify", "bitcoin", "crypto", "payments", "invoices", "webhooks"]
+
+# Zero runtime dependencies, on purpose. Everything here is standard library:
+# urllib.request for HTTP, hmac + hashlib for signature verification, json, decimal.
+dependencies = []
+
+classifiers = [
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://receivify.io"
+Documentation = "https://receivify.io/docs"
+Source = "https://github.com/receivify/receivify-sdks/tree/main/python"
+Issues = "https://github.com/receivify/receivify-sdks/issues"
+
+[tool.setuptools]
+packages = ["receivify"]
+
+[tool.setuptools.package-data]
+receivify = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = { attr = "receivify._version.__version__" }
