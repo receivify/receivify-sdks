@@ -41,7 +41,8 @@ inline const std::vector<std::string>& event_names() {
   static const std::vector<std::string> kEvents = {
       "invoice.confirming", "invoice.partial",         "invoice.paid",      "invoice.swept",
       "invoice.expired",    "invoice.partial_expired", "invoice.cancelled", "invoice.failed",
-      "sweep.sent",         "forward.confirmed",       "forward.sent",      "test"};
+      "sweep.sent",         "forward.detected",        "forward.confirmed", "forward.deferred",
+      "forward.sent",       "forward.reversed",        "forward.failed",    "test"};
   return kEvents;
 }
 

@@ -214,7 +214,7 @@ internal static class WebhookTests
             Test.IsTrue(EventNames.IsInvoiceEvent(EventNames.SweepSent), "sweep.sent carries invoice data");
             Test.IsTrue(EventNames.IsInvoiceEvent(EventNames.Test), "so does test");
             Test.IsFalse(EventNames.IsInvoiceEvent(EventNames.ForwardConfirmed), "forward.* does not");
-            Test.AreEqual(12, EventNames.All.Count, "the frozen set has twelve names");
+            Test.AreEqual(16, EventNames.All.Count, "the frozen set has sixteen names");
         }).ConfigureAwait(false);
 
         await Test.RunAsync("an unknown future event name does not crash the parser", () =>

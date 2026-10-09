@@ -1,0 +1,32 @@
+[package]
+name = "receivify"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Official Rust SDK for the Receivify crypto payments API: invoices, forwarding addresses and signed webhooks."
+license = "MIT"
+homepage = "https://receivify.io"
+documentation = "https://docs.rs/receivify"
+repository = "https://github.com/receivify/receivify-sdks"
+readme = "README.md"
+keywords = ["receivify", "crypto", "payments", "bitcoin", "webhooks"]
+categories = ["api-bindings", "finance"]
+include = ["src/**/*.rs", "tests/**/*.rs", "examples/**/*.rs", "Cargo.toml", "README.md", "LICENSE", ".env.example"]
+
+[features]
+default = ["ureq"]
+# The bundled blocking HTTP transport (ureq + rustls). Turn it off with
+# `default-features = false` and supply your own `Transport` implementation.
+ureq = ["dep:ureq"]
+
+[dependencies]
+serde = { version = "1.0.180", features = ["derive"] }
+# `arbitrary_precision` keeps any JSON number as its exact source text, so a money value that
+# arrives as a number (the API sends strings, but a proxy might not) is never routed through f64.
+serde_json = { version = "1.0.100", features = ["arbitrary_precision"] }
+hmac = "0.12"
+sha2 = "0.10"
+ureq = { version = "2.9", optional = true, default-features = false, features = ["tls"] }
+
+[package.metadata.docs.rs]
+all-features = true

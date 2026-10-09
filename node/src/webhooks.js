@@ -32,8 +32,12 @@ export const EVENTS = Object.freeze([
   'invoice.cancelled',
   'invoice.failed',
   'sweep.sent',
+  'forward.detected',
   'forward.confirmed',
+  'forward.deferred',
   'forward.sent',
+  'forward.reversed',
+  'forward.failed',
   'test',
 ]);
 

@@ -292,8 +292,12 @@ class Receivify
     const EVENT_INVOICE_CANCELLED = 'invoice.cancelled';
     const EVENT_INVOICE_FAILED = 'invoice.failed';
     const EVENT_SWEEP_SENT = 'sweep.sent';
+    const EVENT_FORWARD_DETECTED = 'forward.detected';
     const EVENT_FORWARD_CONFIRMED = 'forward.confirmed';
+    const EVENT_FORWARD_DEFERRED = 'forward.deferred';
     const EVENT_FORWARD_SENT = 'forward.sent';
+    const EVENT_FORWARD_REVERSED = 'forward.reversed';
+    const EVENT_FORWARD_FAILED = 'forward.failed';
     const EVENT_TEST = 'test';
 
     /** @var string */

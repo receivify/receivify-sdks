@@ -42,11 +42,23 @@ public static class EventNames
     /// <summary>Funds physically left a deposit address. Carries the INVOICE payload.</summary>
     public const string SweepSent = "sweep.sent";
 
+    /// <summary>A forwarding deposit was first seen, not yet confirmed. The only event with <c>pending: true</c>.</summary>
+    public const string ForwardDetected = "forward.detected";
+
     /// <summary>A forwarding deposit reached its confirmation threshold.</summary>
     public const string ForwardConfirmed = "forward.confirmed";
 
+    /// <summary>Credited but not forwardable right now. Carries <c>reason</c> and <c>detail</c>.</summary>
+    public const string ForwardDeferred = "forward.deferred";
+
     /// <summary>A forwarding sweep was broadcast.</summary>
     public const string ForwardSent = "forward.sent";
+
+    /// <summary>The credit was undone: a reorg, or a Replace-By-Fee replacement.</summary>
+    public const string ForwardReversed = "forward.reversed";
+
+    /// <summary>Held for manual review; it will not move on its own.</summary>
+    public const string ForwardFailed = "forward.failed";
 
     /// <summary>Emitted exclusively by <c>POST /api/v1/webhooks/test</c>. Carries the INVOICE payload.</summary>
     public const string Test = "test";
@@ -63,8 +75,12 @@ public static class EventNames
         InvoiceCancelled,
         InvoiceFailed,
         SweepSent,
+        ForwardDetected,
         ForwardConfirmed,
+        ForwardDeferred,
         ForwardSent,
+        ForwardReversed,
+        ForwardFailed,
         Test,
     };
 

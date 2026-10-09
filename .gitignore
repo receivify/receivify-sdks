@@ -1,3 +1,7 @@
+# Secrets: copy .env.example to .env, and never commit .env
+.env
+.env.*
+!.env.example
 # Node
 node_modules/
 # Python
@@ -16,6 +20,14 @@ obj/
 TestResults/
 # C++
 /cpp/build*/
+# Java
+/java/target/
+# Rust
+/rust/target/
+/rust/Cargo.lock
+# Ruby
+*.gem
+/ruby/Gemfile.lock
 # Editors / OS
 .DS_Store
 Thumbs.db

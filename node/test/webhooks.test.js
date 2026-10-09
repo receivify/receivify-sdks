@@ -219,8 +219,12 @@ test('the frozen EventName registry is exported in full', () => {
     'invoice.cancelled',
     'invoice.failed',
     'sweep.sent',
+    'forward.detected',
     'forward.confirmed',
+    'forward.deferred',
     'forward.sent',
+    'forward.reversed',
+    'forward.failed',
     'test',
   ]);
   assert.equal(SIGNATURE_HEADER, 'X-Receivify-Signature');
