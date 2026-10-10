@@ -34,6 +34,7 @@ withdraw, and every payment is tracked with reorg-safe, double-entry accounting.
   [idempotency](#idempotency-and-references) · [fees](#who-pays-the-fee) ·
   [rate limits](#rate-limits)
 - [Running the tests](#running-the-tests)
+- [Shop plugins](#shop-plugins): WooCommerce, Magento 2, PrestaShop, OpenCart
 
 ## Pick your language
 
@@ -1317,8 +1318,17 @@ CI runs all of these on every push (see [`.github/workflows/ci.yml`](.github/wor
 
 ## Shop plugins
 
-Ready-made plugins for WooCommerce, Magento 2, PrestaShop and OpenCart are available from
-[receivify.io/integrations](https://receivify.io/integrations).
+No code needed: install the official plugin for your store. Each one has its own repository with the full,
+auditable source, a release zip to install and CI on every supported PHP version.
+
+| Platform | Repository | Download |
+|---|---|---|
+| WooCommerce | [receivify/receivify-woocommerce](https://github.com/receivify/receivify-woocommerce) | [latest release](https://github.com/receivify/receivify-woocommerce/releases/latest) |
+| Magento 2 / Adobe Commerce | [receivify/receivify-magento](https://github.com/receivify/receivify-magento) | [latest release](https://github.com/receivify/receivify-magento/releases/latest) |
+| PrestaShop | [receivify/receivify-prestashop](https://github.com/receivify/receivify-prestashop) | [latest release](https://github.com/receivify/receivify-prestashop/releases/latest) |
+| OpenCart | [receivify/receivify-opencart](https://github.com/receivify/receivify-opencart) | [latest release](https://github.com/receivify/receivify-opencart/releases/latest) |
+
+Setup guides for each are at [receivify.io/integrations](https://receivify.io/integrations).
 
 ## Support and security
 
