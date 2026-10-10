@@ -15,6 +15,9 @@ Invoices, forwarding addresses, payment links and signed webhooks for the
 
 ## Install
 
+> The Maven Central package is coming soon. Until it's published, run the "Build from source"
+> step below once; the coordinates then resolve from your local Maven repository.
+
 **Maven**
 
 ```xml

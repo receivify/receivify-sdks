@@ -11,7 +11,13 @@ OpenCart, PrestaShop, Magento, and any custom store.
 
 ## Install
 
-Copy `Receivify.php` next to your code and require it:
+```bash
+composer require receivify/receivify
+```
+
+Composer installs it from [receivify/receivify-php](https://github.com/receivify/receivify-php)
+(`require __DIR__ . '/vendor/autoload.php';`). Without Composer, copy `Receivify.php` next to
+your code and require it:
 
 ```php
 require_once __DIR__ . '/Receivify.php';

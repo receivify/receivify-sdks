@@ -40,18 +40,18 @@ withdraw, and every payment is tracked with reorg-safe, double-entry accounting.
 |---|---|---|---|---|
 | Node.js / TypeScript | [`node/`](node) | `npm install receivify` | Node 18+ | none |
 | Python | [`python/`](python) | `pip install receivify` | Python 3.9+ | none |
-| PHP | [`php/`](php) | copy `Receivify.php` | PHP 7.4+, ext-curl | none |
-| .NET (C#, F#, VB) | [`dotnet/`](dotnet) | `dotnet add package Receivify` | .NET 8 | none |
+| PHP | [`receivify-php`](https://github.com/receivify/receivify-php) | `composer require receivify/receivify` | PHP 7.4+, ext-curl | none |
+| .NET (C#, F#, VB) | [`dotnet/`](dotnet) | from source (NuGet soon) | .NET 8 | none |
 | C++ | [`cpp/`](cpp) | CMake, header-only | C++17 | libcurl, OpenSSL (optional) |
-| Go | [`go/`](go) | `go get github.com/receivify/receivify-sdks/go` | Go 1.21+ | none |
-| Ruby | [`ruby/`](ruby) | `gem install receivify` | Ruby 2.7+ | none |
-| Java / Kotlin | [`java/`](java) | Maven `io.receivify:receivify-java` | Java 11+ | none |
-| Rust | [`rust/`](rust) | `cargo add receivify` | Rust 1.70+ | serde, hmac, sha2, ureq |
+| Go | [`go/`](go) | `go get github.com/receivify/receivify-sdks/go@v1.0.0` | Go 1.21+ | none |
+| Ruby | [`ruby/`](ruby) | from source (RubyGems soon) | Ruby 2.7+ | none |
+| Java / Kotlin | [`java/`](java) | from source (Maven Central soon) | Java 11+ | none |
+| Rust | [`rust/`](rust) | `cargo add receivify --git https://github.com/receivify/receivify-sdks` | Rust 1.70+ | serde, hmac, sha2, ureq |
 | No SDK (plain PHP) | [`examples/plain-php/`](examples/plain-php) | copy the folder | PHP 7.4+ | none |
 
-> **Package registries:** the npm, PyPI, NuGet, RubyGems, Maven Central and crates.io packages are on their way. Until
-> they're published, install from this repository (every folder's README has a "from source"
-> line) or download a zip from [receivify.io/sdks](https://receivify.io/sdks).
+> **Package registries:** npm, PyPI, Packagist (Composer) and the Go module proxy are live. NuGet,
+> RubyGems, Maven Central and crates.io are on their way; until then the install lines below build
+> from this repository, or download a zip from [receivify.io/sdks](https://receivify.io/sdks).
 
 All nine SDKs have the same surface (invoices, forwarding addresses, tickers, webhook verification
 and secret rotation) and follows the same rules, so moving between languages is painless.
@@ -363,10 +363,13 @@ print(forward.id, forward.address)
 
 ## PHP
 
-One file, no Composer needed, PHP 7.4+. [Full README](php/README.md).
+One file, no dependencies, PHP 7.4+. Lives in its own repo for Composer:
+[receivify/receivify-php](https://github.com/receivify/receivify-php) ([full README](php/README.md)).
 
 ```bash
-# Copy php/Receivify.php into your project, then:
+composer require receivify/receivify
+# then: require __DIR__ . '/vendor/autoload.php';
+# no Composer? copy php/Receivify.php into your project and require_once it
 ```
 
 **Set up the client:**
@@ -504,7 +507,9 @@ echo $forward['id'], ' ', $forward['address'];
 Zero third-party dependencies, async throughout. [Full README](dotnet/README.md).
 
 ```bash
-dotnet add package Receivify
+# NuGet package coming soon. Until then, reference the project from source:
+git clone https://github.com/receivify/receivify-sdks.git
+dotnet add reference receivify-sdks/dotnet/src/Receivify/Receivify.csproj
 ```
 
 **Set up the client** (register one instance, e.g. as a singleton):
@@ -694,7 +699,7 @@ try {
 Standard library only, Go 1.21+. [Full README](go/README.md).
 
 ```bash
-go get github.com/receivify/receivify-sdks/go
+go get github.com/receivify/receivify-sdks/go@v1.0.0
 ```
 
 **A complete program** (`main.go`): `/checkout` creates an invoice and redirects; `/webhooks/receivify`
@@ -809,7 +814,9 @@ fmt.Println(fwd.ID, fwd.Address) // give fwd.Address to the payer
 No runtime dependencies, Ruby 2.7+. [Full README](ruby/README.md).
 
 ```bash
-gem install receivify        # or in your Gemfile: gem "receivify", "~> 1.0"
+# RubyGems package coming soon. Until then, build the gem from source:
+git clone https://github.com/receivify/receivify-sdks.git
+cd receivify-sdks/ruby && gem build receivify.gemspec && gem install ./receivify-1.0.0.gem
 ```
 
 **Set up the client** (`config/initializers/receivify.rb` in Rails):
@@ -900,6 +907,15 @@ end
 
 Java 11+, zero dependencies. [Full README](java/README.md).
 
+Maven Central package coming soon. Until then, build it into your local Maven repository:
+
+```bash
+git clone https://github.com/receivify/receivify-sdks.git
+cd receivify-sdks/java && mvn -q install
+```
+
+Then depend on it as usual:
+
 ```xml
 <dependency>
   <groupId>io.receivify</groupId>
@@ -908,7 +924,7 @@ Java 11+, zero dependencies. [Full README](java/README.md).
 </dependency>
 ```
 
-Gradle: `implementation("io.receivify:receivify-java:1.0.0")`
+Gradle (with `mavenLocal()` in your repositories): `implementation("io.receivify:receivify-java:1.0.0")`
 
 **Set up the client:**
 
@@ -995,7 +1011,7 @@ println("Pay ${invoice.amountDecimal} USDC to ${invoice.address}")
 Blocking client with a pluggable transport. [Full README](rust/README.md).
 
 ```bash
-cargo add receivify
+cargo add receivify --git https://github.com/receivify/receivify-sdks   # crates.io package coming soon
 ```
 
 **Create an invoice:**

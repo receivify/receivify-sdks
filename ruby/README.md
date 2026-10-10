@@ -11,6 +11,9 @@ The official Ruby client for [Receivify](https://receivify.io), the crypto payme
 
 ## Install
 
+> The RubyGems package is coming soon. Until it's published, use the "install from source" steps
+> below; the `gem` line and `Gemfile` entry work as soon as it's live.
+
 ```bash
 gem install receivify
 ```

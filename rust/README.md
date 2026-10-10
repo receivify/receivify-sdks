@@ -14,6 +14,9 @@ Blocking API, Rust 1.70+, no async runtime required. Every example below is copy
 ## 1. Install
 
 ```sh
+# straight from GitHub (works today):
+cargo add receivify --git https://github.com/receivify/receivify-sdks
+# from crates.io, once published:
 cargo add receivify
 ```
 
