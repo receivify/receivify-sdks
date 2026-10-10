@@ -584,6 +584,10 @@ your project.
 
 ---
 
+## Example projects
+
+Runnable C++ programs are in [`examples/`](examples). For full web-shop examples in other languages (the same create-invoice, checkout, verify-webhook flow), see [`../examples`](../examples).
+
 ## License
 
 MIT. See `LICENSE`.

@@ -358,6 +358,14 @@ You can use the same approach in your own tests: pass `receivify.WithHTTPClient(
 - Website: https://receivify.io
 - Docs and API reference: https://receivify.io/docs
 
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **net/http**: [`examples/go-net-http`](../examples/go-net-http)
+
+All examples: [`examples/`](../examples).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

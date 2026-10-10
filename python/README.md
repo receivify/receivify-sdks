@@ -411,3 +411,12 @@ Stock `unittest`, no pytest, no network.
 - Signature comparison uses `hmac.compare_digest`, never `==`.
 - `create_api_key()` and `rotate_webhook_secret()` mask their secrets in `repr()`. Print
   them deliberately or not at all.
+
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **Flask**: [`examples/python-flask`](../examples/python-flask)
+- **FastAPI**: [`examples/python-fastapi`](../examples/python-fastapi)
+
+All examples: [`examples/`](../examples).

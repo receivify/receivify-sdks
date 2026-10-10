@@ -481,6 +481,14 @@ opened. Coverage includes the list envelope and auto-pagination, error-code mapp
 degrading gracefully, money staying an exact string end to end, signature verification with the
 current *and* the previous secret, a tampered body, a stale timestamp, and the retry gate.
 
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **ASP.NET Core minimal API**: [`examples/dotnet-minimal-api`](../examples/dotnet-minimal-api)
+
+All examples: [`examples/`](../examples).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

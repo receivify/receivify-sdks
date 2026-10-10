@@ -424,6 +424,14 @@ docker run --rm -v "$PWD":/sdk -w /sdk ruby:3.3-slim ruby -Ilib -Itest test/run_
 - Website: https://receivify.io
 - API documentation: https://receivify.io/docs
 
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **Sinatra (with a Rails snippet)**: [`examples/ruby-sinatra`](../examples/ruby-sinatra)
+
+All examples: [`examples/`](../examples).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

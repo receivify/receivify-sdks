@@ -26,6 +26,7 @@ withdraw, and every payment is tracked with reorg-safe, double-entry accounting.
 - [Pick your language](#pick-your-language)
 - [How a payment works](#how-a-payment-works)
 - [Before you start](#before-you-start)
+- [Example projects](#example-projects): full runnable shops for Express, Next.js, Flask, FastAPI, Laravel, ASP.NET Core, Go, Sinatra, Spring Boot and axum
 - Examples: [Node.js](#nodejs--typescript) · [Python](#python) · [PHP](#php) · [.NET](#net-c) ·
   [C++](#c) · [Go](#go) · [Ruby](#ruby) · [Java / Kotlin](#java--kotlin) · [Rust](#rust) · [No SDK (curl)](#no-sdk-curl)
 - [Reference](#reference): [invoices](#invoices) · [amounts](#amounts-and-money) ·
@@ -55,6 +56,24 @@ withdraw, and every payment is tracked with reorg-safe, double-entry accounting.
 
 All nine SDKs have the same surface (invoices, forwarding addresses, tickers, webhook verification
 and secret rotation) and follows the same rules, so moving between languages is painless.
+
+## Example projects
+
+Want a whole working project rather than snippets? [`examples/`](examples) has complete, commented mini shops: create an invoice, redirect to checkout, verify the signed webhook and mark the order paid.
+
+| Framework | Example |
+|---|---|
+| Node.js + Express | [`examples/node-express`](examples/node-express) |
+| Next.js App Router | [`examples/nextjs-app-router`](examples/nextjs-app-router) |
+| Python + Flask | [`examples/python-flask`](examples/python-flask) |
+| Python + FastAPI | [`examples/python-fastapi`](examples/python-fastapi) |
+| PHP + Laravel | [`examples/php-laravel`](examples/php-laravel) |
+| Plain PHP | [`examples/plain-php`](examples/plain-php) |
+| ASP.NET Core (C#) | [`examples/dotnet-minimal-api`](examples/dotnet-minimal-api) |
+| Go (`net/http`) | [`examples/go-net-http`](examples/go-net-http) |
+| Ruby + Sinatra (and Rails) | [`examples/ruby-sinatra`](examples/ruby-sinatra) |
+| Java + Spring Boot | [`examples/java-spring-boot`](examples/java-spring-boot) |
+| Rust + axum | [`examples/rust-axum`](examples/rust-axum) |
 
 ## How a payment works
 

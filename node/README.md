@@ -396,6 +396,15 @@ feeds canned responses.
 npm test    # node --test
 ```
 
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **Express**: [`examples/node-express`](../examples/node-express)
+- **Next.js App Router**: [`examples/nextjs-app-router`](../examples/nextjs-app-router)
+
+All examples: [`examples/`](../examples).
+
 ## License
 
 MIT.

@@ -408,6 +408,14 @@ The suite checks the exact requests built, money staying an exact string, auto-p
 (including refusing to loop on a repeated cursor), every error code, the retry policy, and
 webhook signatures against vectors produced by the Node SDK.
 
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **axum**: [`examples/rust-axum`](../examples/rust-axum)
+
+All examples: [`examples/`](../examples).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

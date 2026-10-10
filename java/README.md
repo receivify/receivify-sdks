@@ -446,6 +446,14 @@ javac -d out $(find src -name '*.java') && java -cp out io.receivify.RunTests
 
 ---
 
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **Spring Boot**: [`examples/java-spring-boot`](../examples/java-spring-boot)
+
+All examples: [`examples/`](../examples).
+
 ## License
 
 MIT. See [LICENSE](LICENSE). Docs: [receivify.io/docs](https://receivify.io/docs).

@@ -1,0 +1,9 @@
+{
+    "_comment": "Merge into your Laravel app's composer.json, then run `composer update receivify/receivify`. Once receivify/receivify is on Packagist you can drop the `repositories` block and just run `composer require receivify/receivify`.",
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/receivify/receivify-php" }
+    ],
+    "require": {
+        "receivify/receivify": "^2.0"
+    }
+}

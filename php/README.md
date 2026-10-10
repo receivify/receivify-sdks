@@ -416,3 +416,12 @@ $rcv->setTransport(function (array $req) {
 - Errors are now typed. `catch (Exception $e)` still catches everything.
 
 MIT.
+
+## Example projects
+
+Complete, runnable shops using this SDK (create an invoice, redirect to checkout, verify the signed webhook, mark the order paid), with comments explaining every step:
+
+- **Laravel**: [`examples/php-laravel`](../examples/php-laravel)
+- **plain PHP, no framework**: [`examples/plain-php`](../examples/plain-php)
+
+All examples: [`examples/`](../examples).

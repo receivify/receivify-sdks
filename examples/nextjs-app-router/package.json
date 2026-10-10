@@ -1,0 +1,18 @@
+{
+  "name": "receivify-example-nextjs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Next.js App Router shop that takes crypto with Receivify: checkout route, signed webhook route, order page.",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1"
+  },
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "receivify": "^1.0.0",
+    "server-only": "^0.0.1"
+  }
+}
